@@ -9,17 +9,29 @@
   # 
  */
 function drawVLine(n) {
-  // Continue the code here
+
+for (let i = 0; i < n; i++) {
+  console.log("#");
 }
+
+}
+//drawVLine(5);
+
+
 /**
  *
  * In this function, you will have to draw a horizontal line with `n` length
  * for example `drawHLine(5) should print out # # # # # (there are spaces here!)
  */
 function drawHLine(n) {
-  // Continue the code here
-}
 
+for (let i = 0; i < n; i++) {
+  Print("#");
+}
+console.log("");
+
+}
+//drawHLine(5);
 /**
  * 
  * In this function, you will have to draw a square with a length of `n` 
@@ -33,8 +45,19 @@ function drawHLine(n) {
 
  */
 function drawSquare(n) {
-  // Continue the code here
+  const squareArray = [];
+  let result;
+  for (let i = 0; i < n; i++) {
+    result = "";
+    for (let j = 0; j < n; j++) {
+      result += "#  ";
+    }
+    squareArray.push(result);
+  }
+  return squareArray.join("\n");
 }
+//drawSquare(5);
+
 
 /**
  * 
@@ -49,9 +72,15 @@ function drawSquare(n) {
 
  */
 function drawLeftTriangle(n) {
-  // Continue the code here
+  for (let r = 0; r < n; r++) {
+    
+    for (let c = 0; c < n; c++) {
+      process.stdout.write("#  ");
+    }
+    console.log();
+  }
 }
-
+drawLeftTriangle(5);
 /**
  * 
  * In this function, you will have to draw a tree with a length of `n` 
@@ -65,7 +94,20 @@ function drawLeftTriangle(n) {
 
  */
 function drawTree(n) {
-  // Continue the code here
+  for (let r = 0; r < n; r++) {
+    for (let s = 0; s > r; s++) {
+      console.log(" ");  
+      for (let c = 0; c <= r; c++) {
+        console.log("#  ");
+      }
+      console.log();
+    }
+    console.log();
+  }
+  for (let i = 0; i < n; i++) {
+    console.log("#");
+    
+  }
 }
 /**
  *
@@ -77,5 +119,16 @@ function fillUnoDeck() {
   let yellowCards = [];
   let redCards = [];
   let blueCards = [];
-  // Fill the cards here
+  
+    for (let i = 0; i < 10; i++) {
+      
+      for (let j = 0; j < 2; j++) {
+        greenCards.push(i);
+        redCards.push(i);
+        yellowCards.push(i);
+        blueCards.push(i);
+      } 
+    }
+console.log(greenCards,redCards,yellowCards,blueCards);
 }
+
